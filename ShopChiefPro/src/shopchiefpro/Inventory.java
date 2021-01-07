@@ -175,6 +175,12 @@ public class Inventory extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        txtID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDActionPerformed(evt);
+            }
+        });
+
         txtNAME.setPreferredSize(new java.awt.Dimension(227, 44));
 
         txtCATEGORY.setPreferredSize(new java.awt.Dimension(227, 44));
@@ -396,14 +402,14 @@ public class Inventory extends javax.swing.JFrame {
         String tblID = tblModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
         String tblNAME = tblModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
         String tblCATEGORY = tblModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
-        String tblSTUFF = tblModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        String tblSUPPLIER = tblModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
         String tblQUANTITY = tblModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
         String tblPRICE = tblModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
 
         txtID.setText(tblID);
         txtNAME.setText(tblNAME);
         txtCATEGORY.setText(tblCATEGORY);
-        txtSTUFF.setText(tblSTUFF);
+        txtSTUFF.setText(tblSUPPLIER);
         txtQUANTITY.setText(tblQUANTITY);
         txtPRICE.setText(tblPRICE);
 
@@ -440,8 +446,7 @@ public class Inventory extends javax.swing.JFrame {
     }//GEN-LAST:event_btnADDActionPerformed
 
     private void btnDELETEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDELETEActionPerformed
-        // TODO add your handling code here:
-
+        
         DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
 
         if (jTable1.getSelectedRowCount() == 1) {
@@ -461,7 +466,7 @@ public class Inventory extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDELETEActionPerformed
 
     private void btnUPDATEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUPDATEActionPerformed
-        // TODO add your handling code here:
+        
         DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
 
         if (jTable1.getSelectedRowCount() == 1) {
@@ -496,7 +501,7 @@ public class Inventory extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUPDATEActionPerformed
 
     private void btnSAVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSAVEActionPerformed
-        // TODO add your handling code here:
+        
         String filePath = "Inventory.txt";
         File file = new File(filePath);
         try {
@@ -522,7 +527,7 @@ public class Inventory extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSAVEActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
         String filePath = "Inventory.txt";
         File file = new File(filePath);
 
@@ -543,6 +548,10 @@ public class Inventory extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDActionPerformed
 
     /**
      * @param args the command line arguments

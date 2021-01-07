@@ -192,6 +192,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(255, 248, 224));
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton6.setText("All Products");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 200, 90));
 
         jButton7.setBackground(new java.awt.Color(255, 248, 224));
@@ -243,8 +248,8 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3StateChanged
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-      Inventory i = new Inventory();
-      i.setVisible(true);
+      Inventory adminInventory = new Inventory();
+      adminInventory.setVisible(true);
       
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -253,6 +258,12 @@ public class Dashboard extends javax.swing.JFrame {
        AddUser ad =  new AddUser();
        ad.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        //showProducts showAll = new showProducts();
+        //showAll.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
